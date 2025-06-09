@@ -1,3 +1,7 @@
+body {
+  background-color: #f5e0a3 ; /* choose any color you like */
+}
+
 /* Importing a modern, clean font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
@@ -96,17 +100,41 @@ section h2 {
 
 
 /* Experience Section */
+/* Base state for all experience items */
 .experience-item {
-  background-color: var(--secondary-color);
   padding: 20px;
-  margin-bottom: 20px;
-  border-left: 5px solid var(--primary-color);
+  margin-bottom: 12px;
+  background-color: #fff;
+  border: 2px solid transparent;  /* default transparent border */
+  border-radius: 6px;
+  transition: transform 0.2s ease-in-out,
+              background-color 0.3s ease-in-out,
+              color 0.3s ease-in-out,
+              border-color 0.3s ease-in-out;
+  transform-origin: top center;
 }
 
-.experience-item h3 {
-  margin-top: 0;
-  color: var(--accent-color);
+/* Common hover effect: scale + background and text change */
+.experience-item:hover {
+  transform: scale(1.05);
+  background-color: #e6f7ff;
+  color: #005073;
 }
+
+/* Specific border color on hover: LussoTech card */
+.experience-item.associate:hover {
+  border-color: #0077b6; /* deep blue border */
+}
+
+/* Specific border color on hover: DENAURLEN card */
+.experience-item.content-creator:hover
+ {
+  border-color: #0077b6;
+ /* teal border */
+}
+
+
+
 
 /* Contact Section */
 #contact p {
@@ -122,6 +150,7 @@ section h2 {
 #contact a:hover {
   text-decoration: underline;
 }
+
 
 /* Footer */
 footer {
